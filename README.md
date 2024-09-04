@@ -1,6 +1,9 @@
 # CPSC_298
 ## Using Large Language Models for Coding Assistance
 
+Jonathan Vergonio
+vergonio@chapman.edu
+
 ### Lectures
 
 [Lecture 1](./lectures/lecture01.md)
