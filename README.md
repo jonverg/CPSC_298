@@ -11,3 +11,5 @@ vergonio@chapman.edu
 [Lecture 2](./lectures/lecture02.md)
 
 [Lecture 3](./lectures/lecture03.md)
+
+[Lecture 4](./lectures/lecture04.md)
