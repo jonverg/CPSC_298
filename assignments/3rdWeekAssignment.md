@@ -11,6 +11,16 @@ The goal was to create a language learning tool that could be further expanded f
 1. **Flashcards**: helps users practice vocabulary by flipping through flashcards.
 2. **Quiz**: tests the user's knowledge of the vocabulary presented in the flashcards.
 
+
+Here is the first screenshot showing the Flashcard:
+
+![Flashcard Screenshot](screenshot1.png)
+
+Here is the second screenshot showing the Quiz:
+
+![Quiz Screenshot](screenshot2.png)
+
+
 ## Features
 - **Flashcards**: Users can flip through a set of flashcards with vocabulary in one language on the front and its translation on the back.
 - **Quiz**: A quiz that asks users questions about the vocabulary they have learned. The user's score is tracked, and they can restart the quiz once completed.
