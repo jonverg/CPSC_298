@@ -8,6 +8,7 @@
 - Homework and Quizzes Assesment
 - Cloud Recordings now with AI
 - Reminder: Make sure you DM BOTH mobile & desktop Discord Accounts (add me as friend to do so)
+- Tools for Next Lecture: LLM & Aider (see: Resources)
 
 ## Review how to use Github
 - Git
@@ -15,6 +16,11 @@
     * local Forks
     * Creating branches (prefer `git checkout -b <branch>`)
     * Setting up Pull Requests
+- Setting Upstream and origin:
+    * `git remote add upstream git@github.com:jeffrey-l-turner/CPSC_298.git`
+    * `git remote add origin <your ssh repo address git@github.com:ghuser/CPSC_298.git` # if you're upstream was not set properly do `git rm origin` before this
+    * `git pull master upstream`
+    * `git push # to push changes to your fork`
 - Survey of Development Environments (Aider, Cursor, V0...)
 
 ## Coding Assistance Tools; Reproducibility & Canonical Use
@@ -36,6 +42,7 @@
 - Context Windows
 - Retrieval Augmented Generation (RAG)
 - Mixture of Experts (MoE) and non-Composition
+- Agents
 - Need for Composition
 
 ## Artificial Neural Networks:
@@ -67,4 +74,6 @@
 - [Cursor great but Aider is OG](https://youtu.be/ag-KxYS8Vuw?si=EVnlS-fwelkbx3JG)
 - [Partially share this Philosophy](https://youtu.be/u3wPImWBz7c?si=GzUICDwL7lmCVXVj)
 - [Correct(ness) by Construction (CbC)](https://youtu.be/rHY7nboIyBg?si=A_lapKTLNOksZgDE)
-- Channels I Follow for this Class: [Wes Roth](https://www.youtube.com/@WesRoth), [Matthew Berman](https://www.youtube.com/@matthew_berman), [David Shapiro](https://www.youtube.com/@DaveShap/videos), [Indy Dev Dan](https://www.youtube.com/@indydevdan), [Greg Isenberg](https://www.youtube.com/@GregIsenberg), [3 Blue 1 Brown](https://www.youtube.com/@3blue1brown)
+- [GPT 01 Looks like it is using STaR](https://youtu.be/KKF7kL0pGc4?si=h-kwL4xLqFRNFxLZ)
+- Channels I Follow for this Class: [Wes Roth](https://www.youtube.com/@WesRoth), [Matthew Berman](https://www.youtube.com/@matthew_berman), [David Shapiro](https://www.youtube.com/@DaveShap/videos), [Indy Dev Dan](https://www.youtube.com/@indydevdan), [Greg Isenberg](https://www.youtube.com/@GregIsenberg), [3 Blue 1 Brown](https://www.youtube.com/@3blue1brown), [AI Explained](https://www.youtube.com/@3blue1brown)
+- Tools: [Aider](https://aider.chat/) & [LLM](https://github.com/simonw/llm)
