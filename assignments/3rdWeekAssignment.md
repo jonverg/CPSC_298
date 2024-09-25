@@ -5,11 +5,11 @@ Jonathan Vergonio
 Utilizing V0
 
 ## Overview
-This project is a language learning application built with **React** and **TypeScript**. As someone with limited experience in web development, particularly with modern frameworks like React, TypeScript, and component libraries, this assignment provided an insightful opportunity to explore the process of creating a functional web application from scratch.
+This project is a language learning application built with **React** and **TypeScript**. As someone with limited experience in web development, particularly with modern frameworks like React, TypeScript, and component libraries, this assignment provided a great opportunity to explore the process of creating a functional web application.
 
-The goal was to create a simple yet effective language learning tool that could be further expanded for personal projects. The application currently includes two main features:
-1. **Flashcards**: A component that helps users practice vocabulary by flipping through flashcards.
-2. **Quiz**: A quiz component that tests the user's knowledge of the vocabulary presented in the flashcards.
+The goal was to create a language learning tool that could be further expanded for personal projects. The application currently includes two main features:
+1. **Flashcards**: helps users practice vocabulary by flipping through flashcards.
+2. **Quiz**: tests the user's knowledge of the vocabulary presented in the flashcards.
 
 ## Features
 - **Flashcards**: Users can flip through a set of flashcards with vocabulary in one language on the front and its translation on the back.
