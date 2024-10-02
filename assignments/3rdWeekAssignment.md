@@ -2,7 +2,8 @@
 
 ## Author
 Jonathan Vergonio
-Utilizing V0
+
+Utilizing V0 (Vercel)
 
 ## Overview
 This project is a language learning application built with **React** and **TypeScript**. As someone with limited experience in web development, particularly with modern frameworks like React, TypeScript, and component libraries, this assignment provided a great opportunity to explore the process of creating a functional web application.
