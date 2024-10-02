@@ -11,7 +11,7 @@
 - Walk through Github Pull Request
 - A word on System and Language Ecosystem Package Management (`npm`, `brew`, `choco install`, `pip`, `uv`, etc.)
 - Re-orienting class: TypeScript + Python language ecosystems
-- Get Groq key: (https://console.groq.com/keys)[https://console.groq.com/keys]
+- Get Groq key: [https://console.groq.com/keys](https://console.groq.com/keys)
 
 ## Where Everyone Should Be:
 - Discord Notifications with Webhook (DM me if you need the hook)
@@ -53,8 +53,9 @@
 ## Homework
 - Currently free / See above to get Groq key; [Open AI Compatibility](https://groq.com/groqcloud/)
 - Fifth Week Assignment (#3)
-    * Place jeffrey-l-turner as reviewer on pull request
-    * Setup and add `.aider.conf.yml` to existing PR; [Download from GitHub](https://raw.githubusercontent.com/paul-gauthier/aider/refs/heads/main/aider/website/assets/sample.aider.conf.yml)
+    * `git pull upstream master; git push # on your forked master branch`
+    * Make jeffrey-l-turner a collaborator on your fork & wait for acceptance; Place jeffrey-l-turner as reviewer on pull request
+    * Copy and modify `assignments/sample.aider.conf.yml` to existing `assignments/`directory; Place Groq API key and model in this file so that Aider works properly
     * use Aider and/or LLM with your assignment to enhance code with UI; Make sure all code is committed from V0 in `assignments/` directory
     * Now using [`uv`](https://github.com/astral-sh/uv) to install aider and other Python tooling ([Windows:Chocalatey](https://chocolatey.org/install); Mac: [brew](https://brew.sh/) ; Linux: use `curl`)
 - Make sure to enhance .md file with your screenshot and any notes
