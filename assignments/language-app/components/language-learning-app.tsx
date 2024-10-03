@@ -44,16 +44,16 @@ function Flashcards() {
   }
 
   return (
-    <Card className="w-full max-w-md mx-auto">
+    <Card className="w-full max-w-md mx-auto shadow-lg rounded-lg overflow-hidden">
       <CardHeader>
         <CardTitle>Flashcards</CardTitle>
       </CardHeader>
-      <CardContent className="flex flex-col items-center space-y-4">
+      <CardContent className="flex flex-col items-center space-y-6 p-6">
         <div
-          className="w-full h-48 flex items-center justify-center bg-secondary cursor-pointer"
+          className="w-full h-48 flex items-center justify-center bg-secondary cursor-pointer rounded-lg shadow-md"
           onClick={() => setShowBack(!showBack)}
         >
-          <p className="text-2xl font-bold">
+          <p className="text-2xl font-bold text-center">
             {showBack ? flashcards[currentCard].back : flashcards[currentCard].front}
           </p>
         </div>
@@ -92,19 +92,19 @@ function Quiz() {
       <CardHeader>
         <CardTitle>Quiz</CardTitle>
       </CardHeader>
-      <CardContent>
+      <CardContent className="p-6">
         {showResult ? (
-          <div className="text-center">
-            <h2 className="text-2xl font-bold mb-4">Quiz Completed!</h2>
-            <p className="text-xl mb-4">
+          <div className="text-center space-y-4">
+            <h2 className="text-2xl font-bold">Quiz Completed!</h2>
+            <p className="text-xl">
               Your score: {score} out of {quizQuestions.length}
             </p>
             <Button onClick={resetQuiz}>Restart Quiz</Button>
           </div>
         ) : (
-          <div>
-            <h2 className="text-xl font-bold mb-4">{quizQuestions[currentQuestion].question}</h2>
-            <div className="space-y-2">
+          <div className="space-y-4">
+            <h2 className="text-xl font-bold text-center">{quizQuestions[currentQuestion].question}</h2>
+            <div className="space-y-3">
               {quizQuestions[currentQuestion].options.map((option, index) => (
                 <Button
                   key={index}
@@ -125,8 +125,8 @@ function Quiz() {
 
 export function LanguageLearningApp() {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold text-center mb-6">Language Learning App</h1>
+    <div className="container mx-auto p-6">
+      <h1 className="text-3xl font-bold text-center mb-8">Language Learning App</h1>
       <Tabs defaultValue="flashcards" className="w-full max-w-md mx-auto">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="flashcards">
