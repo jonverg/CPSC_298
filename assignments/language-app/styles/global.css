@@ -59,3 +59,57 @@ input:focus, textarea:focus {
 .rounded {
   border-radius: 8px;
 }
+/* Global Styles */
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+
+p {
+  margin: 0 0 15px;
+}
+
+a {
+  color: #0070f3;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.navbar {
+  background-color: #fff;
+  border-bottom: 1px solid #eaeaea;
+  padding: 10px 0;
+}
+
+.navbar a {
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+.footer {
+  background-color: #fff;
+  border-top: 1px solid #eaeaea;
+  padding: 20px 0;
+  text-align: center;
+}
