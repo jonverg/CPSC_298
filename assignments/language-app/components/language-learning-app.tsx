@@ -44,25 +44,26 @@ function Flashcards() {
   }
 
   return (
-    <Card className="w-full max-w-md mx-auto shadow-lg rounded-lg overflow-hidden">
+    <Card className="w-full max-w-md mx-auto shadow-lg rounded-lg overflow-hidden transition-transform transform hover:scale-105">
       <CardHeader>
-        <CardTitle>Flashcards</CardTitle>
+        <CardTitle className="text-center text-3xl font-semibold">Flashcards</CardTitle>
       </CardHeader>
       <CardContent className="flex flex-col items-center space-y-6 p-6">
         <div
-          className="w-full h-48 flex items-center justify-center bg-secondary cursor-pointer rounded-lg shadow-md"
+          className="w-full h-56 flex items-center justify-center bg-gradient-to-r from-blue-400 to-purple-500 text-white cursor-pointer rounded-lg shadow-lg transition-transform transform hover:rotate-y-180"
           onClick={() => setShowBack(!showBack)}
         >
-          <p className="text-2xl font-bold text-center">
+          <p className="text-3xl font-bold text-center">
             {showBack ? flashcards[currentCard].back : flashcards[currentCard].front}
           </p>
         </div>
-        <Button onClick={nextCard}>Next Card</Button>
+        <Button variant="gradient" onClick={nextCard}>
+          Next Card
+        </Button>
       </CardContent>
     </Card>
   )
 }
-
 function Quiz() {
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [score, setScore] = useState(0)
@@ -88,28 +89,31 @@ function Quiz() {
   }
 
   return (
-    <Card className="w-full max-w-md mx-auto">
+    <Card className="w-full max-w-md mx-auto shadow-md rounded-lg">
       <CardHeader>
-        <CardTitle>Quiz</CardTitle>
+        <CardTitle className="text-center text-3xl font-semibold">Quiz</CardTitle>
       </CardHeader>
-      <CardContent className="p-6">
+      <CardContent className="p-6 space-y-6">
         {showResult ? (
           <div className="text-center space-y-4">
-            <h2 className="text-2xl font-bold">Quiz Completed!</h2>
-            <p className="text-xl">
+            <h2 className="text-3xl font-bold">Quiz Completed!</h2>
+            <p className="text-xl font-semibold">
               Your score: {score} out of {quizQuestions.length}
             </p>
-            <Button onClick={resetQuiz}>Restart Quiz</Button>
+            <Button variant="gradient" size="lg" onClick={resetQuiz}>
+              Restart Quiz
+            </Button>
           </div>
         ) : (
-          <div className="space-y-4">
-            <h2 className="text-xl font-bold text-center">{quizQuestions[currentQuestion].question}</h2>
+          <div className="space-y-6">
+            <h2 className="text-2xl font-bold text-center">
+              {quizQuestions[currentQuestion].question}
+            </h2>
             <div className="space-y-3">
               {quizQuestions[currentQuestion].options.map((option, index) => (
                 <Button
                   key={index}
-                  className="w-full justify-start"
-                  variant="outline"
+                  className="w-full justify-start bg-gray-100 text-black hover:bg-gray-200"
                   onClick={() => handleAnswer(option)}
                 >
                   {option}
@@ -125,16 +129,16 @@ function Quiz() {
 
 export function LanguageLearningApp() {
   return (
-    <div className="container mx-auto p-6">
-      <h1 className="text-3xl font-bold text-center mb-8">Language Learning App</h1>
-      <Tabs defaultValue="flashcards" className="w-full max-w-md mx-auto">
-        <TabsList className="grid w-full grid-cols-2">
-          <TabsTrigger value="flashcards">
-            <BookOpen className="mr-2 h-4 w-4" />
+    <div className="container mx-auto p-8 bg-gray-50 min-h-screen flex flex-col items-center justify-center space-y-8">
+      <h1 className="text-4xl font-bold text-center text-blue-600 mb-10">Language Learning App</h1>
+      <Tabs defaultValue="flashcards" className="w-full max-w-lg">
+        <TabsList className="grid w-full grid-cols-2 bg-white rounded-lg shadow-md p-1">
+          <TabsTrigger value="flashcards" className="text-blue-500 hover:bg-blue-100 rounded-lg">
+            <BookOpen className="mr-2 h-5 w-5" />
             Flashcards
           </TabsTrigger>
-          <TabsTrigger value="quiz">
-            <Brain className="mr-2 h-4 w-4" />
+          <TabsTrigger value="quiz" className="text-blue-500 hover:bg-blue-100 rounded-lg">
+            <Brain className="mr-2 h-5 w-5" />
             Quiz
           </TabsTrigger>
         </TabsList>
