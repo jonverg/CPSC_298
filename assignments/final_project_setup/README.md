@@ -17,13 +17,19 @@ Ensure secure and efficient communication with n8n.
 Function: Execute specialized tasks such as data processing, API calls, computations, or interactions with external systems.
 Implementation:
 Develop in Python for consistency and ease of integration.
-Each agent runs as a microservice or container for scalability.
+Each agent is containerized using Docker to ensure scalability and ease of deployment.
+Agent 1 is implemented as a Flask application, providing a RESTful API for fetching weather data.
+Agent 2 is implemented as a Flask application, providing a RESTful API for performing calculations.
 3.3. n8n Workflows
 Function: Orchestrate the flow between LLMs and agents, manage task delegation, and handle data routing.
 Implementation:
 Design visual workflows to define interaction logic.
 Implement conditional logic to trigger agents based on LLM outputs.
 Set up error handling and logging within workflows.
+3.4. Notify a Discord when the agents interact using provided API key in the `.env` file 
+Each agent should send a notification on the completion of interaction for training
+The final output will also be sent to this channel
+Agent 2 sends a notification to a Discord channel upon completing a calculation, using a webhook URL specified in the environment variables.
 4. Data Flow and Interaction
 Input Reception: The system receives input data or a user query.
 LLM Processing: The LLM analyzes the input and decides on the necessary actions.
@@ -42,7 +48,7 @@ Containerization: Docker for deploying agents and services.
 Database: Optional, for storing state, logs, or intermediate data (e.g., PostgreSQL).
 APIs: RESTful APIs for communication between components.
 6. Implementation Plan
-Phase 1: Environment Setup
+Phase 1: Environment Setup and Docker Configuration
 Set Up n8n:
 Install n8n on a server or cloud platform.
 Configure access control and security settings.
@@ -50,7 +56,9 @@ Configure LLM Access:
 Set up API keys and authentication for the chosen LLM service.
 Establish Development Environment:
 Set up version control (e.g., GitHub).
-Prepare Docker configurations for agents.
+Prepare Docker configurations for agents:
+- Create a Dockerfile for each agent.
+- Ensure each Dockerfile specifies the necessary dependencies and entry points.
 Phase 2: Agent Development
 Design Agent Interfaces:
 Define input and output schemas for agent communication.
@@ -76,7 +84,9 @@ System Testing:
 Perform comprehensive testing with real data inputs.
 Iterate on workflows based on testing feedback.
 Phase 5: Deployment and Scaling
-Deploy Services:
+Deploy Services using Docker:
+- Build Docker images for each agent using `docker build`.
+- Run containers using `docker run` to deploy agents as microservices.
 Use container orchestration (e.g., Kubernetes) for scalability.
 Monitoring and Logging:
 Set up monitoring tools (e.g., Prometheus, Grafana).
